@@ -1,0 +1,6 @@
+.DS_Store
+<<<<<<< HEAD
+*.xcuserdata
+=======
+*.xcuserstate
+>>>>>>> workingbranch
