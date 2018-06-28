@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--homeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="homeVC" id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eHV-GK-JaJ" kind="show" id="Z8X-lI-9t1"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="TGO-bp-jDc">
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
@@ -89,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="136.71875" y="133.0078125"/>
         </scene>
-        <!--View Controller-->
+        <!--leagueVC-->
         <scene sceneID="L2W-lN-4jC">
             <objects>
-                <viewController id="eHV-GK-JaJ" sceneMemberID="viewController">
+                <viewController title="leagueVC" id="eHV-GK-JaJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gq0-5Z-xy1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,11 +171,24 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2b-ni-gST">
+                                <rect key="frame" x="20" y="20" width="29" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Yfs-wl-8y6"/>
+                                    <constraint firstAttribute="width" constant="29" id="z0I-ZX-Jy1"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="kSF-8p-hA0" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSeque:" id="syZ-8C-wUM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="874-6r-Raf" firstAttribute="trailing" secondItem="1p8-LE-MhF" secondAttribute="trailing" id="8wU-cX-doD"/>
+                            <constraint firstItem="r2b-ni-gST" firstAttribute="top" secondItem="1p8-LE-MhF" secondAttribute="top" id="AZz-Xe-Iqi"/>
                             <constraint firstItem="bvY-z6-6O0" firstAttribute="top" secondItem="ZpI-Zg-pyx" secondAttribute="bottom" constant="55" id="CiP-xv-gv1"/>
+                            <constraint firstItem="r2b-ni-gST" firstAttribute="leading" secondItem="1p8-LE-MhF" secondAttribute="leading" constant="20" id="F4r-8n-rY3"/>
                             <constraint firstItem="bvY-z6-6O0" firstAttribute="leading" secondItem="1p8-LE-MhF" secondAttribute="leading" constant="20" id="FD1-L0-gIt"/>
                             <constraint firstItem="1p8-LE-MhF" firstAttribute="trailing" secondItem="3jb-GA-khM" secondAttribute="trailing" constant="20" id="HgX-dB-O56"/>
                             <constraint firstItem="1p8-LE-MhF" firstAttribute="trailing" secondItem="bvY-z6-6O0" secondAttribute="trailing" constant="20" id="JWX-5b-Oa8"/>
@@ -189,13 +205,14 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6t-of-XmJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kSF-8p-hA0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="834.39999999999998" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--skillVC-->
         <scene sceneID="MpF-zX-P7e">
             <objects>
-                <viewController id="QMt-as-4wp" sceneMemberID="viewController">
+                <viewController title="skillVC" id="QMt-as-4wp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0tz-eu-HaC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +304,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
